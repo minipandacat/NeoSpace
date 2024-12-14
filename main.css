@@ -73,9 +73,7 @@ a {
     text-decoration: none;
     color: #007BFF; 
 } 
-#joke{
-    color: black; 
-}
+
 .separator {
     font-size: 16px;
     font-weight: bolder;
@@ -87,7 +85,7 @@ a {
     position: fixed;
     top: -10;
     left: 0; 
-    width: 150px;
+    width: 160px;
     height: 50%;
     background-color: #96f954;
     border-radius: 5px;
@@ -109,7 +107,11 @@ a {
     background: none;
     font-size: 18.5px;
     border:none;
-    padding: 1px 1.3px;
+    padding: 5px 5px;
+}
+#titleLink:hover{
+    background-color: yellow;
+    font-size: 18px;
 }
 .userTime{
     background-color: palegoldenrod;

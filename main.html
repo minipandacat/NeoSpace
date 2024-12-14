@@ -6,18 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="main.css">
-    
+
+    <!-- font section -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+
     <title>NeoSpace</title>
 </head>
 <body>
     <img src="webLogoGlow.png" class="logoImg" >
-    <img src="webBanner.png" class="webBanner" id="TestsDiv">
+    <img src="webBanner.png" class="webBanner">
     <div class="container">
         <div class="yellow-top-panel">
             <div class="tab_options_top">                
@@ -45,38 +47,49 @@
             <div class="tab_options_side">
                 <div class="tab">
                     <div class="tab_text">
-                        <button onclick="TestsFunction()" class="viewResumeBtn" id="titleLink" >
+                        <button onclick="viewResumeBTN()" class="viewResumeBtn" id="titleLink" >
                             View the Resume
                         </button>
                     </div>
                 </div>
                 <div class="tab">
                     <div class="tab_text">
-                        <button class="resumeBtn" id="titleLink">Resume Central</button>
+                        <button onclick="resumeBtn()" class="resumeBtn" id="titleLink">
+                            Resume Central
+                        </button>
                     </div>
                 </div>
                 <div class="tab">
                     <div class="tab_text">
-                        <button class="interestsBtn" id="titleLink">Interests</button>
+                        <button onclick="interestsBtn()" class="interestsBtn" id="titleLink">
+                            Interests
+                        </button>
                     </div>
                 </div>
                 <div class="tab">
                     <div class="tab_text">
-                        <button class="infChaptBtn" id="titleLink">Infinite Chapter</button>
+                        <button onclick="infChaptBtn()" class="infChaptBtn" id="titleLink">
+                            Infinite Chapter
+                        </button>
                     </div>
                 </div>
                 <div class="tab">
                     <div class="tab_text">
-                        <button class="inspoBtn" id="titleLink">Inspo</button>
+                        <button onclick="inspoBtn()"class="inspoBtn" id="titleLink">
+                            Inspo
+                        </button>
                     </div>
                 </div>
                 <div class="tab">
                     <div class="tab_text">
-                        <button class="resourcesBtn" id="titleLink">Resources</button>
+                        <button onclick="resourcesBtn()" class="resourcesBtn" id="titleLink">
+                            Resources
+                        </button>
                     </div>
                 </div>
                 <div class="tab">
-                    <div class="userTime">Time</div>
+                    
+                    </div>
                 </div>
                 <div class="tab">
                     <div class="musicBox">Music Box</div>
@@ -95,26 +108,27 @@
         <div class="main-section">
             <div class="main-section_sectionBox">
                 <div class="sectionTitle">
-                    <div class="view-the-resume_title" id="resume" style="display:none">
+                    <div class="viewTheResume" id="view-the-resume_title" style="display:none">
                         View the Resume
                     </div>  
-<!--                     <div class="resume-central_title">Resume Central</div>  
-                    <div class="interests_title">Interests</div>
-                    <div class="infinite-chapter_title">Infinite Chapter</div>
-                    <div class="inspo_title">Inspo</div>
-                    <div class="resources_title">Resources</div>   -->
-                </div>  
-                
+                    <div class="centralResume" id="resume-central_title" style="display:none">Resume Central</div>  
+                    <div class="interests" id="interests_title" style="display:none">Interests</div>
+                    <div class="infinite" id="infinite-chapter_title" style="display:none">Infinite Chapter</div>
+                    <div class="inspo" id="inspo_title" style="display:none">Inspo</div>
+                    <div class="resources" id="resources_title" style="display:none">Resources</div>
+                </div>               
                 
             </div>
             <div class="sectionDesc">
-                 <div class="view-the-resume" id="resume" style="display:none">
-                    <div class="view-the-resume_desc" >Choose a section to view & learn more</div>
+                 <div class="viewTheResume" id="view-the-resume_desc" style="display:none">
+                    
+                    <div> Choose a section to view & learn more</div>
                 </div>  
             </div>
             <div class="main-content">
                 <div class="main-content_about"></div>           
-                 <div class="section-list_viewResume" id="resume" style="display:none">
+                 <div class="viewTheResume" id="section-list_viewResume" style="display:none">
+
                     <ul class="noBPs">
                         <li>
                             <input type="radio" name="radBtn">
@@ -134,9 +148,8 @@
                         </li>
                     </ul>
                 </div> 
-                
-               <!-- <div class="resume-central"></div>
-                 <div class="interests">
+                <div class="centralResume" style="display:none"></div>
+                 <div class="interests" style="display:none">
                     <div class="section-list_interests">
                         <ul class="noBPs">
                             <li>
@@ -162,12 +175,12 @@
                         </ul>
                     </div>
                 </div>
-                <div class="infinite-chapter">
+                <div class="infinite" style="display:none">
                     <div class="discord_logo"></div>
                     <div class="infinite-chapter_title">Infinite Chapter</div>
                     <div class="infinite-chapter_desc"></div>
                 </div>
-                <div class="inspo">
+                <div class="inspo" style="display:none">
                     <div class="section-list_Inspo">
                         <ul class="noBPs">
                             <li>
@@ -187,7 +200,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="resources">
+                <div class="resources" style="display:none">
                     <div class="section-list_resources">
                         <ul class="noBPs">
                             <li>
@@ -204,7 +217,7 @@
                             </li>
                         </ul>
                     </div>
-                </div>  -->  
+                </div> 
             </div>
         </div>
         <div class="sparkleBox">
@@ -216,9 +229,6 @@
         </div>
     </div>
 
-    <div id="TestsDiv" style="display:none">
-        tests here!
-    </div>
     <script src="app.js"></script>
 </body>
 </html>
