@@ -7,14 +7,20 @@
 }
 body{
     background-color: #fcfcf3;
-    color: whitesmoke;
+    color: black;
     justify-content: center;
 }
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
 .yellow-top-panel {
     position: fixed;
     top: 0; 
     left: 0;
-    width: 55%;
+    width: 80%;
     height: 5%;
     background-color: #96f954;
     border-radius: 5px;
@@ -28,6 +34,13 @@ body{
     height: 100%;
     gap: 10px;
     z-index: 2;
+}
+.topBackgroundImage{
+    background-color: palegoldenrod;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
 }
 
 /* a {
@@ -45,9 +58,128 @@ body{
     top: -10;
     left: 0; 
     width: 150px;
-    height: 80%;
+    height: 50%;
     background-color: #96f954;
     border-radius: 5px;
     z-index: 1;
 }
-  
+
+.tab_options_side {
+    display: flex;
+    flex-direction: column;
+    padding-top: 140px;
+    padding-left: 15px;
+    height: 100%;
+    gap: 30px;
+    z-index: 2;
+}
+.userTime{
+    background-color: palegoldenrod;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    z-index: 2;
+}
+.musicBox{
+    background-color: palegoldenrod;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    height: 80px;
+    z-index: 2;
+}
+.gifBox{
+    background-color: palegoldenrod;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    height: 80px;
+    z-index: 2;
+}
+.main-section {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:5%;
+    left: 150px;
+    width: 66%;
+    height: 45%;
+    background-color: #eeeee4;
+}
+.main-section_sectionBox {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 30%;
+    height: 10%;
+    background-color: #36780a;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+.sectionDesc {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 80%;
+    height: 15%;
+    transform: translateX(-50%);
+    background-color: #8a539b;
+}
+.main-content {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 25%;        
+    left: 50%;
+    width: 80%;
+    height: 67%;
+    transform: translateX(-50%);
+    background-color: #539b53;
+}
+.section-list_viewResume {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: right;
+    top: 3%;
+    left: 50%;
+    width: 90%;
+    height: 93%;
+    transform: translateX(-50%);
+}
+.section-list_interests{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: right;
+    top: 3%;
+    left: 50%;
+    width: 90%;
+    height: 93%;
+    transform: translateX(-50%);
+}
+.section-list_Inspo{display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: right;
+    top: 3%;
+    left: 50%;
+    width: 90%;
+    height: 93%;
+    transform: translateX(-50%);
+}
+.section-list_resources{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    align-items: right;
+    top: 3%;
+    left: 50%;
+    width: 90%;
+    height: 93%;
+    transform: translateX(-50%);
+}
