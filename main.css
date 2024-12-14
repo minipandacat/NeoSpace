@@ -107,8 +107,9 @@ a {
 
 #titleLink{
     background: none;
-    border: none;
     font-size: 18.5px;
+    border:none;
+    padding: 1px 1.3px;
 }
 .userTime{
     background-color: palegoldenrod;
