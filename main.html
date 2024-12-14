@@ -16,6 +16,8 @@
     <title>NeoSpace</title>
 </head>
 <body>
+    <img src="webLogoGlow.png" class="logoImg">
+    <img src="webBanner.png" class="webBanner">
     <div class="container">
         <div class="yellow-top-panel">
             <div class="tab_options_top">                
@@ -26,7 +28,7 @@
                 <div class="tab">
                     <div class="tab_text_top">
                         <a href="https://youtu.be/dQw4w9WgXcQ?si=0wjoBINIVQ-BAomQ">
-                            <span class="link">Profile</span>
+                            <span class="link" id="joke">Profile</span>
                         </a>
                         </a>
                     </div>
@@ -38,25 +40,38 @@
             </div>
             <div class="topBackgroundImage"></div>
         </div>
+        
         <div class="yellow-left-panel">
             <div class="tab_options_side">
                 <div class="tab">
-                    <div class="tab_text">View the Resume</div>
+                    <div class="tab_text">
+                        <button class="viewResumeBtn" id="titleLink">View the Resume</button>
+                    </div>
                 </div>
                 <div class="tab">
-                    <div class="tab_text">Resume Central</div>
+                    <div class="tab_text">
+                        <button class="viewResumeBtn" id="titleLink">Resume Central</button>
+                    </div>
                 </div>
                 <div class="tab">
-                    <div class="tab_text">Interests</div>
+                    <div class="tab_text">
+                        <button class="viewResumeBtn" id="titleLink">Interests</button>
+                    </div>
                 </div>
                 <div class="tab">
-                    <div class="tab_text">Infinite Chapter</div>
+                    <div class="tab_text">
+                        <button class="viewResumeBtn" id="titleLink">Infinite Chapter</button>
+                    </div>
                 </div>
                 <div class="tab">
-                    <div class="tab_text">Inspo</div>
+                    <div class="tab_text">
+                        <button class="viewResumeBtn" id="titleLink">Inspo</button>
+                    </div>
                 </div>
                 <div class="tab">
-                    <div class="tab_text">Resources</div>
+                    <div class="tab_text">
+                        <button class="viewResumeBtn" id="titleLink">Resources</button>
+                    </div>
                 </div>
                 <div class="tab">
                     <div class="userTime">Time</div>
@@ -66,7 +81,7 @@
                 </div>
                 <div class="tab">
                     <div class="tab_text">
-                    <a href="www.linkedin.com/in/joan-elizabeth-lahiri">
+                    <a href="https://www.linkedin.com/in/joan-elizabeth-lahiri">
                         <span class="link">Link to LN</span></a>
                     </div>
                 </div>
@@ -77,12 +92,14 @@
         </div>
         <div class="main-section">
             <div class="main-section_sectionBox">
-                <!-- <div class="view-the-resume_title">View the Resume</div> -->
-                <!-- <div class="resume-central_title">Resume Central</div> -->
-                <div class="interests_title">Interests</div>
-                <!-- <div class="infinite-chapter_title">Infinite Chapter</div>
-                <div class="inspo_title">Inspo</div>
-                <div class="resources_title">Resources</div> -->
+                <div class="sectionTitle">
+                    <!-- <div class="view-the-resume_title">View the Resume</div> -->
+                    <!-- <div class="resume-central_title">Resume Central</div> -->
+                    <div class="interests_title">Interests</div>
+                    <!-- <div class="infinite-chapter_title">Infinite Chapter</div>
+                    <div class="inspo_title">Inspo</div>
+                    <div class="resources_title">Resources</div> -->
+                </div>                
             </div>
             <div class="sectionDesc">
                 <!-- <div class="view-the-resume">
@@ -92,22 +109,50 @@
             <div class="main-content">
                 <div class="main-content_about"></div>           
                 <!-- <div class="section-list_viewResume">
-                    <ul>
-                        <li><label type = "radio">Projects</label></li>
-                        <li><label type = "radio">Education</label></li>
-                        <li><label type = "radio">Work Experience</label></li>
-                        <li><label type = "radio">GitHub</label></li>
+                    <ul class="noBPs">
+                        <li>
+                            <input type="radio" name="radBtn">
+                            <label>Projects</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radBtn">
+                            <label>Education</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radBtn">
+                            <label>Work Experience</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="radBtn">
+                            <label >GitHub</label>
+                        </li>
                     </ul>
                 </div>-->
                 
                <div class="resume-central"></div>
                  <div class="interests">
                     <div class="section-list_interests">
-                        <ul>
-                            <li>Knitting</label>
-                            <li>Genshin Impact</label>
-                            <li>UI/UX Design</label>
-                            <li>Software Development</label>
+                        <ul class="noBPs">
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label>Knitting</label>
+                            </li>
+                            
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label>Genshin Impact</label>
+                            </li>    
+                            
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label>UI/UX Design</label>
+                            </li>
+                            
+                            <li>
+                                <input type = "radio" name="radBtn" id="radBtn">
+                                <label>Software Development</label>
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -118,10 +163,18 @@
                 </div>
                 <div class="inspo">
                     <div class="section-list_Inspo">
-                        <ul>
-                            <li><label type = "radio">NeoPets</label></li>
-                            <li><label type = "radio">MySpace</label></li>
-                            <li><label type = "radio">
+                        <ul class="noBPs">
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label type = "radio">NeoPets</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label >MySpace</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label>
                                 <a href="https://www.codedex.io/holiday-hackathon">
                                     <span class="link">Codedex Mini Holiday Hackerthon - Track 2</span></a>
                             </li>
@@ -130,16 +183,34 @@
                 </div>
                 <div class="resources">
                     <div class="section-list_resources">
-                        <ul>
-                            <li><label type = "radio">Fairy Dust Cursor</label></li>
-                            <li><label type = "radio">Graphics (not made by me)</label></li>
-                            <li><label type = "radio">Experience</label></li>
+                        <ul class="noBPs">
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label type = "radio">Fairy Dust Cursor</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label type = "radio">Graphics (not made by me)</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="radBtn" id="radBtn">
+                                <label type = "radio">Experience</label>
+                            </li>
                         </ul>
                     </div>
                 </div>  -->
             </div>
         </div>
+        <div class="sparkleBox">
+            <div class="sparkle">
+                Enable Sparkles?
+                <button class="sparkleBtn" id="sparkleBtn">Yes</button>
+                <button class="sparkleBtn" id="sparkleBtn">No</button>
+            </div>
+        </div>
     </div>
-    
+
+
+    <script src="app.js"></script>
 </body>
 </html>
