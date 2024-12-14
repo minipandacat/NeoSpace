@@ -31,8 +31,7 @@
                     <div class="tab_text_top">
                         <a href="https://youtu.be/dQw4w9WgXcQ?si=0wjoBINIVQ-BAomQ">
                             <span class="link" id="joke">Profile</span>
-                        </a>
-                        </a>
+                        </a>                        
                     </div>
                 </div>
                 <div class="separator">|</div>
@@ -88,11 +87,13 @@
                     </div>
                 </div>
                 <div class="tab">
-                    
+                    <div class="userTime" >                       
                     </div>
                 </div>
                 <div class="tab">
-                    <div class="musicBox">Music Box</div>
+                    <div class="musicBox">
+                        <img src="equalizer-10278_256.gif" class="musicGif">
+                    </div>
                 </div>
                 <div class="tab">
                     <div class="tab_text">
@@ -131,20 +132,28 @@
 
                     <ul class="noBPs">
                         <li>
-                            <input type="radio" name="radBtn">
+                            <input type="radio" name="radBtn" class="projBTN">
                             <label>Projects</label>
+                            <div class="projBox" id="infoBox" style="display:none">
+                            </div>
                         </li>
                         <li>
-                            <input type="radio" name="radBtn">
+                            <input type="radio" name="radBtn" class="eduBTN">
                             <label>Education</label>
+                            <div class="eduBox" id="infoBox" style="display:none">
+                            </div>
                         </li>
                         <li>
-                            <input type="radio" name="radBtn">
+                            <input type="radio" name="radBtn" class="workEBTN">
                             <label>Work Experience</label>
+                            <div class="workEBox" id="infoBox" style="display:none">
+                            </div>
                         </li>
                         <li>
-                            <input type="radio" name="radBtn">
+                            <input type="radio" name="radBtn" class="ghBTN">
                             <label >GitHub</label>
+                            <div class="ghBox" id="infoBox" style="display:none">                                
+                            </div>
                         </li>
                     </ul>
                 </div> 
@@ -152,23 +161,22 @@
                  <div class="interests" style="display:none">
                     <div class="section-list_interests">
                         <ul class="noBPs">
-                            <li>
-                                <input type="radio" name="radBtn" id="radBtn">
+                            <li>                    
                                 <label>Knitting</label>
                             </li>
                             
                             <li>
-                                <input type="radio" name="radBtn" id="radBtn">
+                                
                                 <label>Genshin Impact</label>
                             </li>    
                             
                             <li>
-                                <input type="radio" name="radBtn" id="radBtn">
+                                
                                 <label>UI/UX Design</label>
                             </li>
                             
                             <li>
-                                <input type = "radio" name="radBtn" id="radBtn">
+                               
                                 <label>Software Development</label>
                             </li>
                             
@@ -183,19 +191,23 @@
                 <div class="inspo" style="display:none">
                     <div class="section-list_Inspo">
                         <ul class="noBPs">
-                            <li>
-                                <input type="radio" name="radBtn" id="radBtn">
-                                <label type = "radio">NeoPets</label>
+                            <li>                            
+                                <label>
+                                    <a href = "https://neopetsclassic.com/">
+                                        <span class="link">NeoPets</span>
+                                    </a>
+                                </label>
+
                             </li>
                             <li>
-                                <input type="radio" name="radBtn" id="radBtn">
-                                <label >MySpace</label>
+                                <label>MySpace</label>
                             </li>
                             <li>
-                                <input type="radio" name="radBtn" id="radBtn">
                                 <label>
                                 <a href="https://www.codedex.io/holiday-hackathon">
-                                    <span class="link">Codedex Mini Holiday Hackerthon - Track 2</span></a>
+                                    <span class="link">Codedex Mini Holiday Hackerthon - Track 2</span>
+                                </a>
+                                </label>
                             </li>
                         </ul>
                     </div>

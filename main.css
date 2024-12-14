@@ -38,6 +38,7 @@ ul.noBPs {
     left: 0;
     z-index: 1;
     opacity: 60%;
+    pointer-events: none;
 }
 .yellow-top-panel {
     position: fixed;
@@ -60,6 +61,10 @@ ul.noBPs {
     height: 100%;
     gap: 10px;
     z-index: 3;
+}
+#joke{
+    z-index: 4;
+    position: relative;
 }
 .topBackgroundImage{
     background-color: palegoldenrod;
@@ -118,6 +123,9 @@ a {
     border-style: solid;
     border-color: black;
     border-radius: 5px;
+    width: 135px;
+    height: 30px;
+    padding-left: 10px;
     z-index: 2;
 }
 .musicBox{
@@ -125,14 +133,20 @@ a {
     border-style: solid;
     border-color: black;
     border-radius: 5px;
+    width:150px;
     height: 80px;
     z-index: 2;
+}
+.musicGif{
+    width: 144px;
+    height: 75px;
 }
 .gifBox{
     background-color: palegoldenrod;
     border-style: solid;
     border-color: black;
     border-radius: 5px;
+    width: 135px;
     height: 80px;
     z-index: 2;
 }
