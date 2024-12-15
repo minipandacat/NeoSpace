@@ -24,7 +24,7 @@
         <div class="yellow-top-panel">
             <div class="tab_options_top">                
                 <div class="tab">
-                    <div class="tab_text_top">Welcome</div>
+                    <div class="tab_text_top">Welcome</div>                   
                 </div>
                 <div class="separator">|</div>
                 <div class="tab">
@@ -109,6 +109,7 @@
         <div class="main-section">
             <div class="main-section_sectionBox">
                 <div class="sectionTitle">
+                    <div class="mainInfo" style="display: block;">Hello</div>
                     <div class="viewTheResume" id="view-the-resume_title" style="display:none">
                         View the Resume
                     </div>  
@@ -126,7 +127,18 @@
                 </div>  
             </div>
             <div class="main-content">
-                <div class="main-content_about"></div>           
+                <div class="mainInfo" id="about" style="display: block;">
+                    <p>
+                        This is my entry for CodeDex's Mini Holiday Hackerthon. There were 2 tracks. I choose track 2 which required me to create my own personal portfolio, fansite, or original product with a retro vibe. I decided to make my own personal portfolio.  My main inspiration was NeoPets Classic and MySpace. 
+                    </p>
+                    <br />
+                    <p id="aboutSpace">
+                        So...
+                    </p>
+                    <div class="welcome" id="aboutSpace">
+                        Welcome to NeoSpace!
+                    </div>
+                </div>           
                  <div class="viewTheResume" id="section-list_viewResume" style="display:none">
                     <ul class="noBPs">
                         <li>
@@ -225,53 +237,74 @@
 
                     <div class="ghBox" id="infoBox" style="display:none">  
                         <div class="titleEntry">
-
                             <a href="https://github.com/minipandacat">
-                                <span class="link"><img src="icons\gitHub.gif"></span>
-                            </a>
-                        </div>                             
+                                <span class="link"><img src="icons\gitHub.gif" class="imageSize1"></span>
+                            </a>                           
+                        </div>  
+                        <a href="https://github.com/minipandacat">
+                            <span class="link"><img src="icons\clickme.gif" class="imageSize4">  </span>
+                        </a>                                              
                     </div>
                     
                     <div class="cdBox" id="infoBox" style="display:none">  
                         <div class="titleEntry">
-                            <a href="https://www.codedex.io/@minipandacat">
-                            
-                                <span class="link"><img src="icons\codedex-bot-logo-compressed.gif"></span>
+                            <img src="icons\arrow3.gif" class="imageSize3">
+                            <a href="https://www.codedex.io/@minipandacat">                            
+                                <span class="link">
+                                    <img src="icons\codedex-bot-logo-compressed.gif" class="imgSize2">
+                                </span>
                             </a>
-                            
-                        </div>                             
+                        </div>   
                     </div>
+                    
                 </div> 
-                <div class="centralResume" style="display:none"></div>
+                <div class="centralResume" style="display:none">
+                    <embed src="harvard_resume.pdf" width="570px" height="580px">
+                </div>
                  <div class="interests" style="display:none">
                     <div class="section-list_interests">
                         <ul class="noBPs">
-                            <li>                    
-                                <label>Knitting</label>
-                            </li>
-                            
                             <li>
-                                
-                                <label>Genshin Impact</label>
-                            </li>    
-                            
-                            <li>
-                                
+                                <button class="knitBTN" id="titleLink2">
+                                    <label>Knitting</label>
+                                </button>
+                            </li>                            
+                            <li>   
+                                <button class="genshinBTN" id="titleLink2">                          
+                                    <label>Genshin Impact</label>
+                                </button>
+                            </li>                             
+                            <li>                                
                                 <label>UI/UX Design</label>
-                            </li>
-                            
-                            <li>
-                               
+                            </li>                            
+                            <li>                               
                                 <label>Software Development</label>
                             </li>
                             
                         </ul>
                     </div>
+                    <div class="knit" style="display:none">
+                        <img src="icons\yarn.png" class="imageSize7">
+                    </div>
+                    <div class="genshin" style="display:none">
+                        <img src="icons\lumineSprite.gif" class="imageSize8">
+                        <img src="icons\Genshin-Impact-Logo.png" class="imageSize8">
+                    </div>
                 </div>
                 <div class="infinite" style="display:none">
-                    <div class="discord_logo"></div>
-                    <div class="infinite-chapter_title">Infinite Chapter</div>
-                    <div class="infinite-chapter_desc"></div>
+                    <div class="discord_logo">
+                        <a href="https://discord.gg/3M9Ws44w">
+                            <span class="link"><img src="icons\oie_oie_glitters.gif" class="imageSize5"></span>
+                        </a>
+                        
+                    </div>                    
+                    <div style="width:100%;height:0;padding-bottom:100%;">
+                        <iframe src="https://giphy.com/embed/3hoLIVAJYkz6T0Ichp" width="25%" height="25%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
+                        </iframe>
+                    </div>
+                   <div class="tagLine">
+                    The Infinite Chapter is an active and vibrant online book club community on Discord, dedicated to fostering a love for reading and promoting insightful discussions among book enthusiasts. As a Moderator and Bot Developer for the server, I play a key role in shaping the community experience and ensuring smooth interactions.
+                   </div>
                 </div>
                 <div class="inspo" style="display:none">
                     <div class="section-list_Inspo">
@@ -284,9 +317,7 @@
                                 </label>
 
                             </li>
-                            <li>
-                                <label>MySpace</label>
-                            </li>
+                            
                             <li>
                                 <label>
                                 <a href="https://www.codedex.io/holiday-hackathon">
@@ -294,7 +325,16 @@
                                 </a>
                                 </label>
                             </li>
+                            <li>
+                                <button class="tomBTN" id="titleLink2">
+                                    <label>MySpace</label>
+                                </button>
+                            </li>
                         </ul>
+                        
+                    </div>
+                    <div class="tom" style="display:none">
+                        <img src="icons/tom.jpg" class="imageSize6">
                     </div>
                 </div>
                 <div class="resources" style="display:none">
@@ -319,11 +359,25 @@
                             </li>   
                             <li>
                                 <label type = "radio">
+                                    <a href="https://www.pixilart.com/">
+                                        <span class="link">PixilArt</span>
+                                    </a>
+                                </label>
+                            </li>   
+                            <li>
+                                <label type = "radio">
                                     <a href="https://pixabay.com/">
                                         <span class="link">Pixbay - Royalty-free images & royalty-free stock</span>
                                     </a>
                                 </label>
-                            </li>                          
+                            </li>   
+                            <li>
+                                <label type = "radio">
+                                    <a href="https://careerservices.fas.harvard.edu/resources/bullet-point-resume-template/">
+                                        <span class="link">Harvard College Bullet Point Resume Template</span>
+                                    </a>
+                                </label>
+                            </li>                      
                             <li>
                                 <label type = "radio">Experience</label>
                             </li>
