@@ -5,6 +5,18 @@ let infiniteSection = document.querySelectorAll(".infinite");
 let inspoSection = document.querySelectorAll(".inspo");
 let resourcesSection = document.querySelectorAll(".resources");
 
+const userTimeElements = document.getElementsByClassName("userTime");
+
+
+function updateClock() {
+    const now = new Date();
+    const timeString = now.toLocaleTimeString(); // Format the time as needed
+
+    for (let element of userTimeElements) {
+        element.textContent = timeString;
+    }
+}
+
 //select desired section
 function viewResumeBTN() {
     hideAllSections();
@@ -12,33 +24,6 @@ function viewResumeBTN() {
         element.style.display = "";
     });
 }
-
-const radioToBoxMap1 = {
-    "projBTN": "projBox",
-    "eduBTN": "eduBox",
-    "workEBTN": "workEBox",
-    "ghBTN": "ghBox",
-    "cdBTN":"cdBox"
-};
-
-function handleRadioClick(event) {
-   
-    Object.values(radioToBoxMap).forEach((boxClass) => {
-        document.querySelector(`.${boxClass}`).style.display = "none";
-    });
-
-    const selectedBoxClass = radioToBoxMap[event.target.className];
-    if (selectedBoxClass) {
-        document.querySelector(`.${selectedBoxClass}`).style.display = "block";
-    }
-}
-
-Object.keys(radioToBoxMap).forEach((radioClass) => {
-    const radioButton = document.querySelector(`.${radioClass}`);
-    radioButton.addEventListener('click', handleRadioClick);
-});
-
-const userTimeElements = document.getElementsByClassName("userTime");
 
 //hide all sections unless selected
 function hideAllSections() {
@@ -84,32 +69,29 @@ function resourcesBtn() {
     });
 }
 
-function updateClock() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString(); // Format the time as needed
+const radioToBoxMap = {
+    "projBTN": "projBox",
+    "eduBTN": "eduBox",
+    "workEBTN": "workEBox",
+    "ghBTN": "ghBox",
+    "cdBTN":"cdBox"
+};
 
-    for (let element of userTimeElements) {
-        element.textContent = timeString;
+function handleRadioClick(event) {
+   
+    Object.values(radioToBoxMap).forEach((boxClass) => {
+        document.querySelector(`.${boxClass}`).style.display = "none";
+    });
+
+    const selectedBoxClass = radioToBoxMap[event.target.className];
+    if (selectedBoxClass) {
+        document.querySelector(`.${selectedBoxClass}`).style.display = "block";
     }
 }
 
-// Get the button and the body element
-const toggleButton = document.getElementById('toggleSparkles');
-const sparklesContainer = document.querySelector('.sparkles-container');
-
-// Start with sparkles enabled
-let sparklesEnabled = true;
-
-toggleButton.addEventListener('click', () => {
-    sparklesEnabled = !sparklesEnabled;
-
-    if (sparklesEnabled) {
-        // Show sparkles
-        sparklesContainer.style.display = 'block';
-    } else {
-        // Hide sparkles
-        sparklesContainer.style.display = 'none';
-    }
+Object.keys(radioToBoxMap).forEach((radioClass) => {
+    const radioButton = document.querySelector(`.${radioClass}`);
+    radioButton.addEventListener('click', handleRadioClick);
 });
 
 

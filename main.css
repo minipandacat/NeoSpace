@@ -20,6 +20,10 @@ ul.noBPs {
     list-style-type: none;
     margin: 0;
     padding: 0;
+} 
+li{
+    display: block;
+    font-size: large;
 }
 .entryBody{
     font-weight:600;
@@ -117,19 +121,23 @@ a {
     padding: 5px 5px;
 }
 #titleLink:hover{
-    background-color: yellow;
+    background-color: transparent;
     font-size: 18px;
 }
-.userTime{
-    background-color: palegoldenrod;
-    border-style: solid;
-    border-color: black;
-    border-radius: 5px;
-    width: 135px;
-    height: 30px;
-    padding-left: 10px;
-    z-index: 2;
-}
+.userTime {
+            background-color: palegoldenrod;
+            border-style: solid;
+            border-color: black;
+            border-radius: 5px;
+            width: 135px;
+            height: 30px;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
 .musicBox{
     background-color: palegoldenrod;
     border-style: solid;
@@ -172,7 +180,7 @@ a {
     left: 50%;
     width: 30%;
     height: 10%;
-    background-color: #36780a;
+    background-color: #87c160;
     border-radius: 5px;
     transform: translateX(-50%);
 }
@@ -182,11 +190,14 @@ a {
     width: auto;
     height: auto;
     text-align: center;
+    font-size: 25px;
 }
 .sectionDesc {
     display: flex;
     flex-direction: column;
     position: absolute;
+    font-size: larger;
+    align-items: center;
     top: 20%;
     left: 50%;
     width: 80%;
@@ -202,7 +213,7 @@ a {
     width: 80%;
     height: 67%;
     transform: translateX(-50%);
-    background-color: #539b53;
+    background-color: #d8e9d8;
 }
 
 .section-list_viewResume {
