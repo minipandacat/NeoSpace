@@ -13,31 +13,29 @@ function viewResumeBTN() {
     });
 }
 
-const projBtnDisplay = document.querySelector(".projBTN")
-let projDisplay = document.querySelector(".projBox")
+const radioToBoxMap1 = {
+    "projBTN": "projBox",
+    "eduBTN": "eduBox",
+    "workEBTN": "workEBox",
+    "ghBTN": "ghBox",
+    "cdBTN":"cdBox"
+};
 
-projBtnDisplay.addEventListener('click', function(){
-    projDisplay.style.display = projBtnDisplay.checked ? "block" : "none";
-});
+function handleRadioClick(event) {
+   
+    Object.values(radioToBoxMap).forEach((boxClass) => {
+        document.querySelector(`.${boxClass}`).style.display = "none";
+    });
 
-const eduBtnDisplay = document.querySelector(".eduBTN")
-let eduDisplay = document.querySelector(".eduBox")
+    const selectedBoxClass = radioToBoxMap[event.target.className];
+    if (selectedBoxClass) {
+        document.querySelector(`.${selectedBoxClass}`).style.display = "block";
+    }
+}
 
-eduBtnDisplay.addEventListener('click', function(){
-    eduDisplay.style.display = eduBtnDisplay.checked ? "block" : "none";
-});
-
-const workEBtnDisplay = document.querySelector(".workEBox")
-let workEDisplay = document.querySelector(".projBox")
-
-workEBtnDisplay.addEventListener('click', function(){
-    workEDisplay.style.display = workEBtnDisplay.checked ? "block" : "none";
-});
-const ghBTNDisplay = document.querySelector(".ghBTN")
-let ghDisplay = document.querySelector(".ghBox")
-
-ghBTNDisplay.addEventListener('click', function(){
-    ghDisplay.style.display = ghBTNDisplay.checked ? "block" : "none";
+Object.keys(radioToBoxMap).forEach((radioClass) => {
+    const radioButton = document.querySelector(`.${radioClass}`);
+    radioButton.addEventListener('click', handleRadioClick);
 });
 
 const userTimeElements = document.getElementsByClassName("userTime");
@@ -94,6 +92,26 @@ function updateClock() {
         element.textContent = timeString;
     }
 }
+
+// Get the button and the body element
+const toggleButton = document.getElementById('toggleSparkles');
+const sparklesContainer = document.querySelector('.sparkles-container');
+
+// Start with sparkles enabled
+let sparklesEnabled = true;
+
+toggleButton.addEventListener('click', () => {
+    sparklesEnabled = !sparklesEnabled;
+
+    if (sparklesEnabled) {
+        // Show sparkles
+        sparklesContainer.style.display = 'block';
+    } else {
+        // Hide sparkles
+        sparklesContainer.style.display = 'none';
+    }
+});
+
 
 // Call updateClock initially and set an interval
 updateClock();

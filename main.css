@@ -21,7 +21,9 @@ ul.noBPs {
     margin: 0;
     padding: 0;
 }
-
+.entryBody{
+    font-weight:600;
+}
 .logoImg{
     width: 160px;
     height: 160px;
@@ -190,7 +192,6 @@ a {
     width: 80%;
     height: 15%;
     transform: translateX(-50%);
-    background-color: #8a539b;
 }
 .main-content {
     display: flex;
@@ -246,18 +247,4 @@ a {
     width: 90%;
     height: 93%;
     transform: translateX(-50%);
-}
-.sparkleBox{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    align-items: left;
-    top: 47.5%;
-    left: 61%;
-    width: 190px;
-    height: 30px;  
-}
-
-#sparkleBtn{
-    background: none;
 }
